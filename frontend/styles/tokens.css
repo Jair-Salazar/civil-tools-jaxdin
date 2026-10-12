@@ -1,0 +1,24 @@
+/* Tokens de diseño. Paleta: piedra + grafito, con rosewood como acento (no como fondo). */
+:root {
+  --bg: #F1EEEA; --surface: #FAF8F5; --surface-2: #ECE7E1; --line: #D8D1C9; --line-soft: #E5DFD8;
+  --ink: #29262B; --ink-2: #5C565B; --ink-3: #857E83;
+  --accent: #98545F; --accent-hover: #7F4350; --accent-ink: #FFFFFF; --accent-soft: #EFDADB; --wine: #6B3544; --champagne: #E5D4B6;
+  --ok: #4B7656; --warn: #9C6F20; --err: #A8402F; --info: #4F6A82;
+  --grid: rgba(41, 38, 43, .045);
+  --shadow: 0 1px 0 rgba(41,38,43,.04), 0 8px 24px -12px rgba(41,38,43,.18);
+  --font-display: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, Consolas, monospace;
+  --r-sm: 4px; --r-md: 6px; --r-lg: 10px; --header-h: 60px; --sidebar-w: 260px; --sidebar-w-collapsed: 68px;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  color-scheme: light;
+}
+:root[data-theme='dark'] {
+  --bg: #1C191E; --surface: #25212A; --surface-2: #2F2A34; --line: #3D3742; --line-soft: #322D37;
+  --ink: #EEE7E2; --ink-2: #BCB2B2; --ink-3: #8F868B;
+  --accent: #D49BA4; --accent-hover: #E3B0B8; --accent-ink: #2A1A1F; --accent-soft: #3B2830; --wine: #E2AEB8; --champagne: #CDBA98;
+  --ok: #7FB08B; --warn: #D2A24E; --err: #E27E6C; --info: #8FB0CF;
+  --grid: rgba(238, 231, 226, .045);
+  --shadow: 0 1px 0 rgba(0,0,0,.2), 0 10px 28px -14px rgba(0,0,0,.6);
+  color-scheme: dark;
+}

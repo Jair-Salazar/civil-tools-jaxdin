@@ -1,0 +1,2 @@
+{ "name": "CIVIL TOOLS — JAXDIN", "short_name": "Civil Tools", "description": "Herramientas digitales para Ingeniería Civil.", "start_url": "./", "scope": "./", "display": "standalone",
+  "background_color": "#F1EEEA", "theme_color": "#98545F", "icons": [{ "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }] }

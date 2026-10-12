@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CIVIL TOOLS — JAXDIN</title>
+  <meta name="description" content="Herramientas digitales para Ingeniería Civil.">
+  <meta name="theme-color" content="#98545F">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="styles/tokens.css"><link rel="stylesheet" href="styles/base.css"><link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css"><link rel="stylesheet" href="styles/pages.css"><link rel="stylesheet" href="styles/loader.css">
+  <script>
+    // Se ejecuta ANTES de pintar: aplica el tema guardado y decide si se muestra la animación (evita parpadeos).
+    try { var p = JSON.parse(localStorage.getItem('ct_prefs') || '{}'); if (p.theme) document.documentElement.dataset.theme = p.theme; if (p.bootAnimation === false) document.documentElement.dataset.boot = 'off'; } catch (e) {}
+  </script>
+</head>
+<body>
+  <noscript>CIVIL TOOLS necesita JavaScript para funcionar.</noscript>
+  <div class="boot" id="boot" role="status" aria-label="Cargando CIVIL TOOLS — JAXDIN">
+    <div class="boot-inner">
+      <canvas id="boot-canvas" width="160" height="90"></canvas>
+      <div class="boot-brand"><b>CIVIL TOOLS</b><i>JAXDIN</i></div>
+      <p class="boot-msg">Preparando herramientas...</p>
+      <div class="boot-ruler"></div>
+    </div>
+  </div>
+  <div class="app" id="app" hidden></div>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <div id="modal-root"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

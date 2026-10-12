@@ -1,0 +1,11 @@
+/* Pantalla de carga con animación pixel art (ver animations/loader.js) */
+.boot { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; background: var(--bg); transition: opacity .5s ease, visibility .5s; }
+.boot.hide { opacity: 0; visibility: hidden; }
+.boot-inner { text-align: center; padding: 20px; width: min(92vw, 460px); }
+.boot canvas { width: 100%; max-width: 440px; aspect-ratio: 16 / 9; image-rendering: pixelated; border: 1px solid var(--ink-3); outline: 5px solid var(--bg); box-shadow: 0 0 0 6px var(--line); background: #2a2530; }
+.boot-brand { margin-top: 26px; display: flex; flex-direction: column; align-items: center; line-height: 1; }
+.boot-brand b { letter-spacing: .3em; font-size: 1.3rem; font-weight: 600; padding-left: .3em; } .boot-brand i { font-family: var(--font-display); color: var(--accent); font-size: 1.3rem; margin-top: 6px; letter-spacing: .12em; }
+.boot-msg { margin: 14px 0 12px; color: var(--ink-2); font-size: .95rem; min-height: 1.4em; }
+.boot-ruler { height: 12px; width: min(80%, 300px); margin: 0 auto; border-left: 1px solid var(--ink-3); border-right: 1px solid var(--ink-3); position: relative; background: repeating-linear-gradient(90deg, var(--line) 0 1px, transparent 1px 10px) 0 100% / 100% 7px no-repeat; }
+.boot-ruler::after { content: ''; position: absolute; left: 0; bottom: 0; height: 3px; width: 0; background: var(--accent); animation: ruler var(--boot-ms, 1800ms) linear forwards; } @keyframes ruler { to { width: 100%; } }
+html[data-boot='off'] .boot { display: none; }
